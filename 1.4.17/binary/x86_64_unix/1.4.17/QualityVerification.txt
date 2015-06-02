@@ -1,0 +1,1090 @@
+if test -d ../m4-1.4.17/.git				\
+	&& git --version >/dev/null 2>&1; then			\
+  cd ../m4-1.4.17 &&						\
+  git submodule --quiet foreach					\
+      test '"$(git rev-parse "$sha1")"'			\
+      = '"$(git merge-base origin "$sha1")"'			\
+    || { echo 'maint.mk: found non-public submodule commit' >&2;	\
+	 exit 1; };						\
+else								\
+  : ;								\
+fi
+make  check-recursive
+make[1]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17'
+Making check in .
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17'
+Making check in examples
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/examples'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/examples'
+Making check in lib
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/lib'
+make  check-am
+make[3]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/lib'
+make[3]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/lib'
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/lib'
+Making check in src
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/src'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/src'
+Making check in doc
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/doc'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/doc'
+Making check in checks
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/checks'
+make  check-local
+make[3]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/checks'
+PATH=`pwd`/../src":"$PATH; export PATH; \
+../../m4-1.4.17/checks/check-them -I ../../m4-1.4.17/checks/../examples ../../m4-1.4.17/checks/*[0-9][0-9][0-9].* ../../m4-1.4.17/checks/stackovf.test
+m4 (GNU M4) 1.4.17
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Rene' Seindal.
+Checking ../../m4-1.4.17/checks/001.preprocess
+Checking ../../m4-1.4.17/checks/002.debugging_
+Checking ../../m4-1.4.17/checks/003.command_li
+Checking ../../m4-1.4.17/checks/004.command_li
+Checking ../../m4-1.4.17/checks/005.command_li
+Checking ../../m4-1.4.17/checks/006.command_li
+Checking ../../m4-1.4.17/checks/007.command_li
+Checking ../../m4-1.4.17/checks/008.comments
+Checking ../../m4-1.4.17/checks/009.comments
+Checking ../../m4-1.4.17/checks/010.input_proc
+Checking ../../m4-1.4.17/checks/011.input_proc
+Checking ../../m4-1.4.17/checks/012.inhibiting
+Checking ../../m4-1.4.17/checks/013.inhibiting
+Checking ../../m4-1.4.17/checks/014.inhibiting
+Checking ../../m4-1.4.17/checks/015.inhibiting
+Checking ../../m4-1.4.17/checks/016.inhibiting
+Checking ../../m4-1.4.17/checks/017.inhibiting
+Checking ../../m4-1.4.17/checks/018.inhibiting
+Checking ../../m4-1.4.17/checks/019.inhibiting
+Checking ../../m4-1.4.17/checks/020.macro_argu
+Checking ../../m4-1.4.17/checks/021.macro_argu
+Checking ../../m4-1.4.17/checks/022.macro_argu
+Checking ../../m4-1.4.17/checks/023.macro_argu
+Checking ../../m4-1.4.17/checks/024.macro_argu
+Checking ../../m4-1.4.17/checks/025.quoting_ar
+Checking ../../m4-1.4.17/checks/026.macro_expa
+Checking ../../m4-1.4.17/checks/027.macro_expa
+Checking ../../m4-1.4.17/checks/028.define
+Checking ../../m4-1.4.17/checks/029.define
+Checking ../../m4-1.4.17/checks/030.define
+Checking ../../m4-1.4.17/checks/031.arguments
+Checking ../../m4-1.4.17/checks/032.arguments
+Checking ../../m4-1.4.17/checks/033.arguments
+Checking ../../m4-1.4.17/checks/034.arguments
+Checking ../../m4-1.4.17/checks/035.arguments
+Checking ../../m4-1.4.17/checks/036.arguments
+Checking ../../m4-1.4.17/checks/037.pseudo_arg
+Checking ../../m4-1.4.17/checks/038.pseudo_arg
+Checking ../../m4-1.4.17/checks/039.pseudo_arg
+Checking ../../m4-1.4.17/checks/040.pseudo_arg
+Checking ../../m4-1.4.17/checks/041.pseudo_arg
+Checking ../../m4-1.4.17/checks/042.pseudo_arg
+Checking ../../m4-1.4.17/checks/043.pseudo_arg
+Checking ../../m4-1.4.17/checks/044.pseudo_arg
+Checking ../../m4-1.4.17/checks/045.pseudo_arg
+Checking ../../m4-1.4.17/checks/046.undefine
+Checking ../../m4-1.4.17/checks/047.undefine
+Checking ../../m4-1.4.17/checks/048.defn
+Checking ../../m4-1.4.17/checks/049.defn
+Checking ../../m4-1.4.17/checks/050.defn
+Checking ../../m4-1.4.17/checks/051.defn
+Checking ../../m4-1.4.17/checks/052.defn
+Checking ../../m4-1.4.17/checks/053.defn
+Checking ../../m4-1.4.17/checks/054.defn
+Checking ../../m4-1.4.17/checks/055.pushdef
+Checking ../../m4-1.4.17/checks/056.pushdef
+Checking ../../m4-1.4.17/checks/057.indir
+Checking ../../m4-1.4.17/checks/058.indir
+Checking ../../m4-1.4.17/checks/059.indir
+Checking ../../m4-1.4.17/checks/060.builtin
+Checking ../../m4-1.4.17/checks/061.builtin
+Checking ../../m4-1.4.17/checks/062.builtin
+Checking ../../m4-1.4.17/checks/063.builtin
+Checking ../../m4-1.4.17/checks/064.builtin
+Checking ../../m4-1.4.17/checks/065.ifdef
+Checking ../../m4-1.4.17/checks/066.ifelse
+Checking ../../m4-1.4.17/checks/067.ifelse
+Checking ../../m4-1.4.17/checks/068.ifelse
+Checking ../../m4-1.4.17/checks/069.ifelse
+Checking ../../m4-1.4.17/checks/070.ifelse
+Checking ../../m4-1.4.17/checks/071.shift
+Checking ../../m4-1.4.17/checks/072.shift
+Checking ../../m4-1.4.17/checks/073.shift
+Checking ../../m4-1.4.17/checks/074.shift
+Checking ../../m4-1.4.17/checks/075.shift
+Checking ../../m4-1.4.17/checks/076.shift
+Checking ../../m4-1.4.17/checks/077.shift
+Checking ../../m4-1.4.17/checks/078.shift
+Checking ../../m4-1.4.17/checks/079.forloop
+Checking ../../m4-1.4.17/checks/080.forloop
+Checking ../../m4-1.4.17/checks/081.forloop
+Checking ../../m4-1.4.17/checks/082.foreach
+Checking ../../m4-1.4.17/checks/083.foreach
+Checking ../../m4-1.4.17/checks/084.foreach
+Checking ../../m4-1.4.17/checks/085.foreach
+Checking ../../m4-1.4.17/checks/086.foreach
+Checking ../../m4-1.4.17/checks/087.foreach
+Checking ../../m4-1.4.17/checks/088.stacks
+Checking ../../m4-1.4.17/checks/089.stacks
+Checking ../../m4-1.4.17/checks/090.compositio
+Checking ../../m4-1.4.17/checks/091.compositio
+Checking ../../m4-1.4.17/checks/092.compositio
+Checking ../../m4-1.4.17/checks/093.compositio
+Checking ../../m4-1.4.17/checks/094.dumpdef
+Checking ../../m4-1.4.17/checks/095.dumpdef
+Checking ../../m4-1.4.17/checks/096.trace
+Checking ../../m4-1.4.17/checks/097.trace
+Checking ../../m4-1.4.17/checks/098.trace
+Checking ../../m4-1.4.17/checks/099.trace
+Checking ../../m4-1.4.17/checks/100.trace
+Checking ../../m4-1.4.17/checks/101.debug_leve
+Checking ../../m4-1.4.17/checks/102.debug_leve
+Checking ../../m4-1.4.17/checks/103.debug_leve
+Checking ../../m4-1.4.17/checks/104.debug_outp
+Checking ../../m4-1.4.17/checks/105.dnl
+Checking ../../m4-1.4.17/checks/106.dnl
+Checking ../../m4-1.4.17/checks/107.dnl
+Checking ../../m4-1.4.17/checks/108.changequot
+Checking ../../m4-1.4.17/checks/109.changequot
+Checking ../../m4-1.4.17/checks/110.changequot
+Checking ../../m4-1.4.17/checks/111.changequot
+Checking ../../m4-1.4.17/checks/112.changequot
+Checking ../../m4-1.4.17/checks/113.changequot
+Checking ../../m4-1.4.17/checks/114.changequot
+Checking ../../m4-1.4.17/checks/115.changequot
+Checking ../../m4-1.4.17/checks/116.changequot
+Checking ../../m4-1.4.17/checks/117.changequot
+Checking ../../m4-1.4.17/checks/118.changequot
+Checking ../../m4-1.4.17/checks/119.changecom
+Checking ../../m4-1.4.17/checks/120.changecom
+Checking ../../m4-1.4.17/checks/121.changecom
+Checking ../../m4-1.4.17/checks/122.changecom
+Checking ../../m4-1.4.17/checks/123.changecom
+Checking ../../m4-1.4.17/checks/124.changecom
+Checking ../../m4-1.4.17/checks/125.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/126.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/127.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/128.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/129.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/130.changeword
+ skipping: no changeword support
+Checking ../../m4-1.4.17/checks/131.m4wrap
+Checking ../../m4-1.4.17/checks/132.m4wrap
+Checking ../../m4-1.4.17/checks/133.m4wrap
+Checking ../../m4-1.4.17/checks/134.m4wrap
+Checking ../../m4-1.4.17/checks/135.m4wrap
+Checking ../../m4-1.4.17/checks/136.m4wrap
+Checking ../../m4-1.4.17/checks/137.include
+Checking ../../m4-1.4.17/checks/138.include
+Checking ../../m4-1.4.17/checks/139.include
+Checking ../../m4-1.4.17/checks/140.include
+Checking ../../m4-1.4.17/checks/141.include
+Checking ../../m4-1.4.17/checks/142.include
+Checking ../../m4-1.4.17/checks/143.diversions
+Checking ../../m4-1.4.17/checks/144.diversions
+Checking ../../m4-1.4.17/checks/145.diversions
+Checking ../../m4-1.4.17/checks/146.diversions
+Checking ../../m4-1.4.17/checks/147.divert
+Checking ../../m4-1.4.17/checks/148.divert
+Checking ../../m4-1.4.17/checks/149.divert
+Checking ../../m4-1.4.17/checks/150.divert
+Checking ../../m4-1.4.17/checks/151.divert
+Checking ../../m4-1.4.17/checks/152.undivert
+Checking ../../m4-1.4.17/checks/153.undivert
+Checking ../../m4-1.4.17/checks/154.undivert
+Checking ../../m4-1.4.17/checks/155.undivert
+Checking ../../m4-1.4.17/checks/156.undivert
+Checking ../../m4-1.4.17/checks/157.undivert
+Checking ../../m4-1.4.17/checks/158.divnum
+Checking ../../m4-1.4.17/checks/159.cleardiver
+Checking ../../m4-1.4.17/checks/160.cleardiver
+Checking ../../m4-1.4.17/checks/161.len
+Checking ../../m4-1.4.17/checks/162.index_macr
+Checking ../../m4-1.4.17/checks/163.index_macr
+Checking ../../m4-1.4.17/checks/164.index_macr
+Checking ../../m4-1.4.17/checks/165.index_macr
+Checking ../../m4-1.4.17/checks/166.regexp
+Checking ../../m4-1.4.17/checks/167.regexp
+Checking ../../m4-1.4.17/checks/168.regexp
+Checking ../../m4-1.4.17/checks/169.substr
+Checking ../../m4-1.4.17/checks/170.substr
+Checking ../../m4-1.4.17/checks/171.translit
+Checking ../../m4-1.4.17/checks/172.translit
+Checking ../../m4-1.4.17/checks/173.translit
+Checking ../../m4-1.4.17/checks/174.translit
+Checking ../../m4-1.4.17/checks/175.patsubst
+Checking ../../m4-1.4.17/checks/176.patsubst
+Checking ../../m4-1.4.17/checks/177.patsubst
+Checking ../../m4-1.4.17/checks/178.patsubst
+Checking ../../m4-1.4.17/checks/179.patsubst
+Checking ../../m4-1.4.17/checks/180.format
+Checking ../../m4-1.4.17/checks/181.format
+Checking ../../m4-1.4.17/checks/182.format
+Checking ../../m4-1.4.17/checks/183.format
+Checking ../../m4-1.4.17/checks/184.incr
+Checking ../../m4-1.4.17/checks/185.eval
+Checking ../../m4-1.4.17/checks/186.eval
+Checking ../../m4-1.4.17/checks/187.eval
+Checking ../../m4-1.4.17/checks/188.eval
+Checking ../../m4-1.4.17/checks/189.eval
+Checking ../../m4-1.4.17/checks/190.eval
+Checking ../../m4-1.4.17/checks/191.platform_m
+Checking ../../m4-1.4.17/checks/192.platform_m
+Checking ../../m4-1.4.17/checks/193.platform_m
+Checking ../../m4-1.4.17/checks/194.syscmd
+Checking ../../m4-1.4.17/checks/195.syscmd
+Checking ../../m4-1.4.17/checks/196.esyscmd
+Checking ../../m4-1.4.17/checks/197.sysval
+Checking ../../m4-1.4.17/checks/198.sysval
+Checking ../../m4-1.4.17/checks/199.mkstemp
+Checking ../../m4-1.4.17/checks/200.mkstemp
+Checking ../../m4-1.4.17/checks/201.mkstemp
+Checking ../../m4-1.4.17/checks/202.errprint
+Checking ../../m4-1.4.17/checks/203.location
+Checking ../../m4-1.4.17/checks/204.location
+Checking ../../m4-1.4.17/checks/205.location
+Checking ../../m4-1.4.17/checks/206.m4exit
+Checking ../../m4-1.4.17/checks/207.m4exit
+Checking ../../m4-1.4.17/checks/208.using_froz
+Checking ../../m4-1.4.17/checks/209.using_froz
+Checking ../../m4-1.4.17/checks/210.using_froz
+Checking ../../m4-1.4.17/checks/211.extensions
+Checking ../../m4-1.4.17/checks/212.other_inco
+Checking ../../m4-1.4.17/checks/213.other_inco
+Checking ../../m4-1.4.17/checks/214.improved_e
+Checking ../../m4-1.4.17/checks/215.improved_f
+Checking ../../m4-1.4.17/checks/216.improved_f
+Checking ../../m4-1.4.17/checks/217.improved_f
+Checking ../../m4-1.4.17/checks/218.improved_f
+Checking ../../m4-1.4.17/checks/219.improved_f
+Checking ../../m4-1.4.17/checks/220.improved_f
+Checking ../../m4-1.4.17/checks/221.improved_f
+Checking ../../m4-1.4.17/checks/222.improved_f
+Checking ../../m4-1.4.17/checks/223.improved_f
+Checking ../../m4-1.4.17/checks/224.improved_f
+Checking ../../m4-1.4.17/checks/225.improved_f
+Checking ../../m4-1.4.17/checks/226.improved_f
+Checking ../../m4-1.4.17/checks/227.improved_f
+Checking ../../m4-1.4.17/checks/228.improved_f
+Checking ../../m4-1.4.17/checks/229.improved_c
+Checking ../../m4-1.4.17/checks/230.improved_c
+Checking ../../m4-1.4.17/checks/231.improved_m
+Checking ../../m4-1.4.17/checks/232.improved_m
+Checking ../../m4-1.4.17/checks/233.improved_c
+Checking ../../m4-1.4.17/checks/234.improved_c
+Checking ../../m4-1.4.17/checks/235.improved_c
+Checking ../../m4-1.4.17/checks/236.improved_f
+Checking ../../m4-1.4.17/checks/stackovf.test
+Stack soft limit set to 300K
+Pass
+
+Skipped checks were:
+  ../../m4-1.4.17/checks/125.changeword ../../m4-1.4.17/checks/126.changeword ../../m4-1.4.17/checks/127.changeword ../../m4-1.4.17/checks/128.changeword ../../m4-1.4.17/checks/129.changeword ../../m4-1.4.17/checks/130.changeword
+All checks successful
+make[3]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/checks'
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/checks'
+Making check in tests
+make[2]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make  check-recursive
+make[3]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+Making check in .
+make[4]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make  libtests.a test-alloca-opt test-array_list test-array_oset test-avltree_oset test-binary-io test-btowc test-c-ctype test-c-stack test-c-strcasecmp test-c-strncasecmp test-canonicalize-lgpl test-chdir test-cloexec test-close test-closein  test-dirent test-dirname test-dup test-dup2 test-environ test-errno test-fclose  test-fcntl-h test-fcntl test-fdopen test-fflush test-fflush2 test-fgetc test-filenamecat test-float test-fopen-safer test-fopen test-fpending test-fpurge test-fputc test-fread test-freadahead test-freading test-frexp-nolibm test-frexpl-nolibm test-fseek test-fseeko test-fseeko3 test-fseeko4 test-fstat test-ftell test-ftell3 test-ftello test-ftello3 test-ftello4 test-fwrite test-getcwd-lgpl test-getdtablesize test-getopt test-gettimeofday test-ignore-value test-intprops test-inttypes test-isnand-nolibm test-isnanf-nolibm test-isnanl-nolibm  test-langinfo test-link test-linkedhash_list  test-locale test-localeconv test-localename test-lseek test-lstat test-malloc-gnu test-malloca  test-math test-mbrtowc test-mbrtowc-w32 test-mbsinit test-memchr test-memchr2 test-nl_langinfo test-open test-pathmax test-pipe2 test-posix_spawn_file_actions_addclose test-posix_spawn_file_actions_adddup2 test-posix_spawn_file_actions_addopen test-posix_spawn1 test-posix_spawn2 test-printf-frexp test-printf-frexpl test-quotearg-simple test-raise test-rawmemchr test-readlink test-regex test-rename test-rmdir test-sched test-setenv test-setlocale1 test-setlocale2 test-sigaction  test-signal-h test-signbit test-sigpipe test-sigprocmask test-sleep test-snprintf  test-spawn-pipe-main test-spawn-pipe-child test-spawn test-stat test-stdbool test-stddef test-stdint  test-stdio  test-stdlib test-strchrnul test-strerror  test-string test-strnlen test-strsignal test-strstr test-strtod test-symlink  test-sys_stat  test-sys_time  test-sys_types  test-sys_wait  test-time  test-dup-safer test-unistd test-unsetenv test-vasnprintf test-vasprintf-posix test-vasprintf test-verify test-version-etc  test-wchar test-wcrtomb test-wcrtomb-w32  test-wctype-h test-write test-xalloc-die test-xvasprintf
+make[5]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+depbase=`echo gl_array_list.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT gl_array_list.o -MD -MP -MF $depbase.Tpo -c -o gl_array_list.o ../../m4-1.4.17/tests/gl_array_list.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo gl_array_oset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT gl_array_oset.o -MD -MP -MF $depbase.Tpo -c -o gl_array_oset.o ../../m4-1.4.17/tests/gl_array_oset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo localename.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT localename.o -MD -MP -MF $depbase.Tpo -c -o localename.o ../../m4-1.4.17/tests/localename.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-alloca-opt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-alloca-opt.o -MD -MP -MF $depbase.Tpo -c -o test-alloca-opt.o ../../m4-1.4.17/tests/test-alloca-opt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-array_list.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-array_list.o -MD -MP -MF $depbase.Tpo -c -o test-array_list.o ../../m4-1.4.17/tests/test-array_list.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-array_oset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-array_oset.o -MD -MP -MF $depbase.Tpo -c -o test-array_oset.o ../../m4-1.4.17/tests/test-array_oset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-avltree_oset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-avltree_oset.o -MD -MP -MF $depbase.Tpo -c -o test-avltree_oset.o ../../m4-1.4.17/tests/test-avltree_oset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-binary-io.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-binary-io.o -MD -MP -MF $depbase.Tpo -c -o test-binary-io.o ../../m4-1.4.17/tests/test-binary-io.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-btowc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-btowc.o -MD -MP -MF $depbase.Tpo -c -o test-btowc.o ../../m4-1.4.17/tests/test-btowc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-c-ctype.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-c-ctype.o -MD -MP -MF $depbase.Tpo -c -o test-c-ctype.o ../../m4-1.4.17/tests/test-c-ctype.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-c-stack.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-c-stack.o -MD -MP -MF $depbase.Tpo -c -o test-c-stack.o ../../m4-1.4.17/tests/test-c-stack.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-c-strcasecmp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-c-strcasecmp.o -MD -MP -MF $depbase.Tpo -c -o test-c-strcasecmp.o ../../m4-1.4.17/tests/test-c-strcasecmp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-c-strncasecmp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-c-strncasecmp.o -MD -MP -MF $depbase.Tpo -c -o test-c-strncasecmp.o ../../m4-1.4.17/tests/test-c-strncasecmp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-canonicalize-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-canonicalize-lgpl.o -MD -MP -MF $depbase.Tpo -c -o test-canonicalize-lgpl.o ../../m4-1.4.17/tests/test-canonicalize-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-chdir.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-chdir.o -MD -MP -MF $depbase.Tpo -c -o test-chdir.o ../../m4-1.4.17/tests/test-chdir.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-cloexec.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-cloexec.o -MD -MP -MF $depbase.Tpo -c -o test-cloexec.o ../../m4-1.4.17/tests/test-cloexec.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-close.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-close.o -MD -MP -MF $depbase.Tpo -c -o test-close.o ../../m4-1.4.17/tests/test-close.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-closein.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-closein.o -MD -MP -MF $depbase.Tpo -c -o test-closein.o ../../m4-1.4.17/tests/test-closein.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-dirent.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-dirent.o -MD -MP -MF $depbase.Tpo -c -o test-dirent.o ../../m4-1.4.17/tests/test-dirent.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-dirname.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-dirname.o -MD -MP -MF $depbase.Tpo -c -o test-dirname.o ../../m4-1.4.17/tests/test-dirname.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-dup.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-dup.o -MD -MP -MF $depbase.Tpo -c -o test-dup.o ../../m4-1.4.17/tests/test-dup.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-dup2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-dup2.o -MD -MP -MF $depbase.Tpo -c -o test-dup2.o ../../m4-1.4.17/tests/test-dup2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-environ.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-environ.o -MD -MP -MF $depbase.Tpo -c -o test-environ.o ../../m4-1.4.17/tests/test-environ.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-errno.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-errno.o -MD -MP -MF $depbase.Tpo -c -o test-errno.o ../../m4-1.4.17/tests/test-errno.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fclose.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fclose.o -MD -MP -MF $depbase.Tpo -c -o test-fclose.o ../../m4-1.4.17/tests/test-fclose.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fcntl-h.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fcntl-h.o -MD -MP -MF $depbase.Tpo -c -o test-fcntl-h.o ../../m4-1.4.17/tests/test-fcntl-h.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fcntl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fcntl.o -MD -MP -MF $depbase.Tpo -c -o test-fcntl.o ../../m4-1.4.17/tests/test-fcntl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fdopen.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fdopen.o -MD -MP -MF $depbase.Tpo -c -o test-fdopen.o ../../m4-1.4.17/tests/test-fdopen.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fflush.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fflush.o -MD -MP -MF $depbase.Tpo -c -o test-fflush.o ../../m4-1.4.17/tests/test-fflush.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fflush2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fflush2.o -MD -MP -MF $depbase.Tpo -c -o test-fflush2.o ../../m4-1.4.17/tests/test-fflush2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fgetc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fgetc.o -MD -MP -MF $depbase.Tpo -c -o test-fgetc.o ../../m4-1.4.17/tests/test-fgetc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-filenamecat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-filenamecat.o -MD -MP -MF $depbase.Tpo -c -o test-filenamecat.o ../../m4-1.4.17/tests/test-filenamecat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-float.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-float.o -MD -MP -MF $depbase.Tpo -c -o test-float.o ../../m4-1.4.17/tests/test-float.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fopen-safer.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fopen-safer.o -MD -MP -MF $depbase.Tpo -c -o test-fopen-safer.o ../../m4-1.4.17/tests/test-fopen-safer.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fopen.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fopen.o -MD -MP -MF $depbase.Tpo -c -o test-fopen.o ../../m4-1.4.17/tests/test-fopen.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fpending.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fpending.o -MD -MP -MF $depbase.Tpo -c -o test-fpending.o ../../m4-1.4.17/tests/test-fpending.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fpurge.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fpurge.o -MD -MP -MF $depbase.Tpo -c -o test-fpurge.o ../../m4-1.4.17/tests/test-fpurge.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fputc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fputc.o -MD -MP -MF $depbase.Tpo -c -o test-fputc.o ../../m4-1.4.17/tests/test-fputc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fread.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fread.o -MD -MP -MF $depbase.Tpo -c -o test-fread.o ../../m4-1.4.17/tests/test-fread.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-freadahead.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-freadahead.o -MD -MP -MF $depbase.Tpo -c -o test-freadahead.o ../../m4-1.4.17/tests/test-freadahead.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-freading.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-freading.o -MD -MP -MF $depbase.Tpo -c -o test-freading.o ../../m4-1.4.17/tests/test-freading.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-frexp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-frexp.o -MD -MP -MF $depbase.Tpo -c -o test-frexp.o ../../m4-1.4.17/tests/test-frexp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo randomd.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT randomd.o -MD -MP -MF $depbase.Tpo -c -o randomd.o ../../m4-1.4.17/tests/randomd.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-frexpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-frexpl.o -MD -MP -MF $depbase.Tpo -c -o test-frexpl.o ../../m4-1.4.17/tests/test-frexpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo randoml.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT randoml.o -MD -MP -MF $depbase.Tpo -c -o randoml.o ../../m4-1.4.17/tests/randoml.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fseek.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fseek.o -MD -MP -MF $depbase.Tpo -c -o test-fseek.o ../../m4-1.4.17/tests/test-fseek.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fseeko.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fseeko.o -MD -MP -MF $depbase.Tpo -c -o test-fseeko.o ../../m4-1.4.17/tests/test-fseeko.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fseeko3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fseeko3.o -MD -MP -MF $depbase.Tpo -c -o test-fseeko3.o ../../m4-1.4.17/tests/test-fseeko3.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fseeko4.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fseeko4.o -MD -MP -MF $depbase.Tpo -c -o test-fseeko4.o ../../m4-1.4.17/tests/test-fseeko4.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fstat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fstat.o -MD -MP -MF $depbase.Tpo -c -o test-fstat.o ../../m4-1.4.17/tests/test-fstat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ftell.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ftell.o -MD -MP -MF $depbase.Tpo -c -o test-ftell.o ../../m4-1.4.17/tests/test-ftell.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ftell3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ftell3.o -MD -MP -MF $depbase.Tpo -c -o test-ftell3.o ../../m4-1.4.17/tests/test-ftell3.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ftello.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ftello.o -MD -MP -MF $depbase.Tpo -c -o test-ftello.o ../../m4-1.4.17/tests/test-ftello.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ftello3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ftello3.o -MD -MP -MF $depbase.Tpo -c -o test-ftello3.o ../../m4-1.4.17/tests/test-ftello3.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ftello4.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ftello4.o -MD -MP -MF $depbase.Tpo -c -o test-ftello4.o ../../m4-1.4.17/tests/test-ftello4.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-fwrite.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-fwrite.o -MD -MP -MF $depbase.Tpo -c -o test-fwrite.o ../../m4-1.4.17/tests/test-fwrite.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-getcwd-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-getcwd-lgpl.o -MD -MP -MF $depbase.Tpo -c -o test-getcwd-lgpl.o ../../m4-1.4.17/tests/test-getcwd-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-getdtablesize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-getdtablesize.o -MD -MP -MF $depbase.Tpo -c -o test-getdtablesize.o ../../m4-1.4.17/tests/test-getdtablesize.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-getopt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-getopt.o -MD -MP -MF $depbase.Tpo -c -o test-getopt.o ../../m4-1.4.17/tests/test-getopt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-gettimeofday.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-gettimeofday.o -MD -MP -MF $depbase.Tpo -c -o test-gettimeofday.o ../../m4-1.4.17/tests/test-gettimeofday.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-ignore-value.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-ignore-value.o -MD -MP -MF $depbase.Tpo -c -o test-ignore-value.o ../../m4-1.4.17/tests/test-ignore-value.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-intprops.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-intprops.o -MD -MP -MF $depbase.Tpo -c -o test-intprops.o ../../m4-1.4.17/tests/test-intprops.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-inttypes.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-inttypes.o -MD -MP -MF $depbase.Tpo -c -o test-inttypes.o ../../m4-1.4.17/tests/test-inttypes.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-isnand-nolibm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-isnand-nolibm.o -MD -MP -MF $depbase.Tpo -c -o test-isnand-nolibm.o ../../m4-1.4.17/tests/test-isnand-nolibm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-isnanf-nolibm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-isnanf-nolibm.o -MD -MP -MF $depbase.Tpo -c -o test-isnanf-nolibm.o ../../m4-1.4.17/tests/test-isnanf-nolibm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-isnanl-nolibm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-isnanl-nolibm.o -MD -MP -MF $depbase.Tpo -c -o test-isnanl-nolibm.o ../../m4-1.4.17/tests/test-isnanl-nolibm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-langinfo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-langinfo.o -MD -MP -MF $depbase.Tpo -c -o test-langinfo.o ../../m4-1.4.17/tests/test-langinfo.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-link.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-link.o -MD -MP -MF $depbase.Tpo -c -o test-link.o ../../m4-1.4.17/tests/test-link.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-linkedhash_list.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-linkedhash_list.o -MD -MP -MF $depbase.Tpo -c -o test-linkedhash_list.o ../../m4-1.4.17/tests/test-linkedhash_list.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-locale.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-locale.o -MD -MP -MF $depbase.Tpo -c -o test-locale.o ../../m4-1.4.17/tests/test-locale.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-localeconv.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-localeconv.o -MD -MP -MF $depbase.Tpo -c -o test-localeconv.o ../../m4-1.4.17/tests/test-localeconv.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-localename.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-localename.o -MD -MP -MF $depbase.Tpo -c -o test-localename.o ../../m4-1.4.17/tests/test-localename.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-lseek.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-lseek.o -MD -MP -MF $depbase.Tpo -c -o test-lseek.o ../../m4-1.4.17/tests/test-lseek.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-lstat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-lstat.o -MD -MP -MF $depbase.Tpo -c -o test-lstat.o ../../m4-1.4.17/tests/test-lstat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-malloc-gnu.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-malloc-gnu.o -MD -MP -MF $depbase.Tpo -c -o test-malloc-gnu.o ../../m4-1.4.17/tests/test-malloc-gnu.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-malloca.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-malloca.o -MD -MP -MF $depbase.Tpo -c -o test-malloca.o ../../m4-1.4.17/tests/test-malloca.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-math.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-math.o -MD -MP -MF $depbase.Tpo -c -o test-math.o ../../m4-1.4.17/tests/test-math.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-mbrtowc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-mbrtowc.o -MD -MP -MF $depbase.Tpo -c -o test-mbrtowc.o ../../m4-1.4.17/tests/test-mbrtowc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-mbrtowc-w32.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-mbrtowc-w32.o -MD -MP -MF $depbase.Tpo -c -o test-mbrtowc-w32.o ../../m4-1.4.17/tests/test-mbrtowc-w32.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-mbsinit.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-mbsinit.o -MD -MP -MF $depbase.Tpo -c -o test-mbsinit.o ../../m4-1.4.17/tests/test-mbsinit.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-memchr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-memchr.o -MD -MP -MF $depbase.Tpo -c -o test-memchr.o ../../m4-1.4.17/tests/test-memchr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-memchr2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-memchr2.o -MD -MP -MF $depbase.Tpo -c -o test-memchr2.o ../../m4-1.4.17/tests/test-memchr2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-nl_langinfo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-nl_langinfo.o -MD -MP -MF $depbase.Tpo -c -o test-nl_langinfo.o ../../m4-1.4.17/tests/test-nl_langinfo.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-open.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-open.o -MD -MP -MF $depbase.Tpo -c -o test-open.o ../../m4-1.4.17/tests/test-open.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-pathmax.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-pathmax.o -MD -MP -MF $depbase.Tpo -c -o test-pathmax.o ../../m4-1.4.17/tests/test-pathmax.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-pipe2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-pipe2.o -MD -MP -MF $depbase.Tpo -c -o test-pipe2.o ../../m4-1.4.17/tests/test-pipe2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-posix_spawn_file_actions_addclose.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-posix_spawn_file_actions_addclose.o -MD -MP -MF $depbase.Tpo -c -o test-posix_spawn_file_actions_addclose.o ../../m4-1.4.17/tests/test-posix_spawn_file_actions_addclose.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-posix_spawn_file_actions_adddup2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-posix_spawn_file_actions_adddup2.o -MD -MP -MF $depbase.Tpo -c -o test-posix_spawn_file_actions_adddup2.o ../../m4-1.4.17/tests/test-posix_spawn_file_actions_adddup2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-posix_spawn_file_actions_addopen.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-posix_spawn_file_actions_addopen.o -MD -MP -MF $depbase.Tpo -c -o test-posix_spawn_file_actions_addopen.o ../../m4-1.4.17/tests/test-posix_spawn_file_actions_addopen.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-posix_spawn1.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-posix_spawn1.o -MD -MP -MF $depbase.Tpo -c -o test-posix_spawn1.o ../../m4-1.4.17/tests/test-posix_spawn1.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-posix_spawn2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-posix_spawn2.o -MD -MP -MF $depbase.Tpo -c -o test-posix_spawn2.o ../../m4-1.4.17/tests/test-posix_spawn2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-printf-frexp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-printf-frexp.o -MD -MP -MF $depbase.Tpo -c -o test-printf-frexp.o ../../m4-1.4.17/tests/test-printf-frexp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-printf-frexpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-printf-frexpl.o -MD -MP -MF $depbase.Tpo -c -o test-printf-frexpl.o ../../m4-1.4.17/tests/test-printf-frexpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-quotearg-simple.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-quotearg-simple.o -MD -MP -MF $depbase.Tpo -c -o test-quotearg-simple.o ../../m4-1.4.17/tests/test-quotearg-simple.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-raise.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-raise.o -MD -MP -MF $depbase.Tpo -c -o test-raise.o ../../m4-1.4.17/tests/test-raise.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-rawmemchr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-rawmemchr.o -MD -MP -MF $depbase.Tpo -c -o test-rawmemchr.o ../../m4-1.4.17/tests/test-rawmemchr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-readlink.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-readlink.o -MD -MP -MF $depbase.Tpo -c -o test-readlink.o ../../m4-1.4.17/tests/test-readlink.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-regex.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-regex.o -MD -MP -MF $depbase.Tpo -c -o test-regex.o ../../m4-1.4.17/tests/test-regex.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-rename.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-rename.o -MD -MP -MF $depbase.Tpo -c -o test-rename.o ../../m4-1.4.17/tests/test-rename.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-rmdir.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-rmdir.o -MD -MP -MF $depbase.Tpo -c -o test-rmdir.o ../../m4-1.4.17/tests/test-rmdir.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sched.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sched.o -MD -MP -MF $depbase.Tpo -c -o test-sched.o ../../m4-1.4.17/tests/test-sched.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-setenv.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-setenv.o -MD -MP -MF $depbase.Tpo -c -o test-setenv.o ../../m4-1.4.17/tests/test-setenv.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-setlocale1.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-setlocale1.o -MD -MP -MF $depbase.Tpo -c -o test-setlocale1.o ../../m4-1.4.17/tests/test-setlocale1.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-setlocale2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-setlocale2.o -MD -MP -MF $depbase.Tpo -c -o test-setlocale2.o ../../m4-1.4.17/tests/test-setlocale2.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sigaction.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sigaction.o -MD -MP -MF $depbase.Tpo -c -o test-sigaction.o ../../m4-1.4.17/tests/test-sigaction.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-signal-h.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-signal-h.o -MD -MP -MF $depbase.Tpo -c -o test-signal-h.o ../../m4-1.4.17/tests/test-signal-h.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-signbit.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-signbit.o -MD -MP -MF $depbase.Tpo -c -o test-signbit.o ../../m4-1.4.17/tests/test-signbit.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sigpipe.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sigpipe.o -MD -MP -MF $depbase.Tpo -c -o test-sigpipe.o ../../m4-1.4.17/tests/test-sigpipe.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sigprocmask.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sigprocmask.o -MD -MP -MF $depbase.Tpo -c -o test-sigprocmask.o ../../m4-1.4.17/tests/test-sigprocmask.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sleep.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sleep.o -MD -MP -MF $depbase.Tpo -c -o test-sleep.o ../../m4-1.4.17/tests/test-sleep.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-snprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-snprintf.o -MD -MP -MF $depbase.Tpo -c -o test-snprintf.o ../../m4-1.4.17/tests/test-snprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-spawn-pipe-main.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-spawn-pipe-main.o -MD -MP -MF $depbase.Tpo -c -o test-spawn-pipe-main.o ../../m4-1.4.17/tests/test-spawn-pipe-main.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-spawn-pipe-child.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-spawn-pipe-child.o -MD -MP -MF $depbase.Tpo -c -o test-spawn-pipe-child.o ../../m4-1.4.17/tests/test-spawn-pipe-child.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-spawn.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-spawn.o -MD -MP -MF $depbase.Tpo -c -o test-spawn.o ../../m4-1.4.17/tests/test-spawn.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stat.o -MD -MP -MF $depbase.Tpo -c -o test-stat.o ../../m4-1.4.17/tests/test-stat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stdbool.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stdbool.o -MD -MP -MF $depbase.Tpo -c -o test-stdbool.o ../../m4-1.4.17/tests/test-stdbool.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stddef.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stddef.o -MD -MP -MF $depbase.Tpo -c -o test-stddef.o ../../m4-1.4.17/tests/test-stddef.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stdint.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stdint.o -MD -MP -MF $depbase.Tpo -c -o test-stdint.o ../../m4-1.4.17/tests/test-stdint.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stdio.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stdio.o -MD -MP -MF $depbase.Tpo -c -o test-stdio.o ../../m4-1.4.17/tests/test-stdio.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-stdlib.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-stdlib.o -MD -MP -MF $depbase.Tpo -c -o test-stdlib.o ../../m4-1.4.17/tests/test-stdlib.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strchrnul.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strchrnul.o -MD -MP -MF $depbase.Tpo -c -o test-strchrnul.o ../../m4-1.4.17/tests/test-strchrnul.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strerror.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strerror.o -MD -MP -MF $depbase.Tpo -c -o test-strerror.o ../../m4-1.4.17/tests/test-strerror.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-string.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-string.o -MD -MP -MF $depbase.Tpo -c -o test-string.o ../../m4-1.4.17/tests/test-string.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strnlen.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strnlen.o -MD -MP -MF $depbase.Tpo -c -o test-strnlen.o ../../m4-1.4.17/tests/test-strnlen.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strsignal.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strsignal.o -MD -MP -MF $depbase.Tpo -c -o test-strsignal.o ../../m4-1.4.17/tests/test-strsignal.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strstr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strstr.o -MD -MP -MF $depbase.Tpo -c -o test-strstr.o ../../m4-1.4.17/tests/test-strstr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-strtod.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-strtod.o -MD -MP -MF $depbase.Tpo -c -o test-strtod.o ../../m4-1.4.17/tests/test-strtod.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-symlink.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-symlink.o -MD -MP -MF $depbase.Tpo -c -o test-symlink.o ../../m4-1.4.17/tests/test-symlink.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sys_stat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sys_stat.o -MD -MP -MF $depbase.Tpo -c -o test-sys_stat.o ../../m4-1.4.17/tests/test-sys_stat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sys_time.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sys_time.o -MD -MP -MF $depbase.Tpo -c -o test-sys_time.o ../../m4-1.4.17/tests/test-sys_time.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sys_types.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sys_types.o -MD -MP -MF $depbase.Tpo -c -o test-sys_types.o ../../m4-1.4.17/tests/test-sys_types.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-sys_wait.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-sys_wait.o -MD -MP -MF $depbase.Tpo -c -o test-sys_wait.o ../../m4-1.4.17/tests/test-sys_wait.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-time.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-time.o -MD -MP -MF $depbase.Tpo -c -o test-time.o ../../m4-1.4.17/tests/test-time.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-dup-safer.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-dup-safer.o -MD -MP -MF $depbase.Tpo -c -o test-dup-safer.o ../../m4-1.4.17/tests/test-dup-safer.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-unistd.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-unistd.o -MD -MP -MF $depbase.Tpo -c -o test-unistd.o ../../m4-1.4.17/tests/test-unistd.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-unsetenv.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-unsetenv.o -MD -MP -MF $depbase.Tpo -c -o test-unsetenv.o ../../m4-1.4.17/tests/test-unsetenv.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-vasnprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-vasnprintf.o -MD -MP -MF $depbase.Tpo -c -o test-vasnprintf.o ../../m4-1.4.17/tests/test-vasnprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-vasprintf-posix.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-vasprintf-posix.o -MD -MP -MF $depbase.Tpo -c -o test-vasprintf-posix.o ../../m4-1.4.17/tests/test-vasprintf-posix.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-vasprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-vasprintf.o -MD -MP -MF $depbase.Tpo -c -o test-vasprintf.o ../../m4-1.4.17/tests/test-vasprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-verify.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-verify.o -MD -MP -MF $depbase.Tpo -c -o test-verify.o ../../m4-1.4.17/tests/test-verify.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-version-etc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-version-etc.o -MD -MP -MF $depbase.Tpo -c -o test-version-etc.o ../../m4-1.4.17/tests/test-version-etc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-wchar.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-wchar.o -MD -MP -MF $depbase.Tpo -c -o test-wchar.o ../../m4-1.4.17/tests/test-wchar.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-wcrtomb.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-wcrtomb.o -MD -MP -MF $depbase.Tpo -c -o test-wcrtomb.o ../../m4-1.4.17/tests/test-wcrtomb.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-wcrtomb-w32.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-wcrtomb-w32.o -MD -MP -MF $depbase.Tpo -c -o test-wcrtomb-w32.o ../../m4-1.4.17/tests/test-wcrtomb-w32.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-wctype-h.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-wctype-h.o -MD -MP -MF $depbase.Tpo -c -o test-wctype-h.o ../../m4-1.4.17/tests/test-wctype-h.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-write.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-write.o -MD -MP -MF $depbase.Tpo -c -o test-write.o ../../m4-1.4.17/tests/test-write.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-xalloc-die.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-xalloc-die.o -MD -MP -MF $depbase.Tpo -c -o test-xalloc-die.o ../../m4-1.4.17/tests/test-xalloc-die.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-xvasprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -std=gnu99  -I. -I../../m4-1.4.17/tests -I../lib  -DIN_M4_GNULIB_TESTS=1 -I. -I../../m4-1.4.17/tests -I.. -I../../m4-1.4.17/tests/.. -I../lib -I../../m4-1.4.17/tests/../lib   -g -O2 -MT test-xvasprintf.o -MD -MP -MF $depbase.Tpo -c -o test-xvasprintf.o ../../m4-1.4.17/tests/test-xvasprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libtests.a
+ar cru libtests.a gl_array_list.o gl_array_oset.o localename.o 
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-spawn-pipe-child test-spawn-pipe-child.o  
+ranlib libtests.a
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-alloca-opt test-alloca-opt.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-array_list test-array_list.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-array_oset test-array_oset.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-avltree_oset test-avltree_oset.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-binary-io test-binary-io.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-btowc test-btowc.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-c-ctype test-c-ctype.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-c-stack test-c-stack.o libtests.a ../lib/libm4.a libtests.a    
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-chdir test-chdir.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-c-strcasecmp test-c-strcasecmp.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-c-strncasecmp test-c-strncasecmp.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-canonicalize-lgpl test-canonicalize-lgpl.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-cloexec test-cloexec.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-closein test-closein.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-close test-close.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-dirent test-dirent.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-dirname test-dirname.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-dup test-dup.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-dup2 test-dup2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-environ test-environ.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-errno test-errno.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fclose test-fclose.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fcntl-h test-fcntl-h.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fcntl test-fcntl.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fflush test-fflush.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fdopen test-fdopen.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fflush2 test-fflush2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fgetc test-fgetc.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-filenamecat test-filenamecat.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-float test-float.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fopen-safer test-fopen-safer.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fopen test-fopen.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fpending test-fpending.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fpurge test-fpurge.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fputc test-fputc.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fread test-fread.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-freading test-freading.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-frexp-nolibm test-frexp.o randomd.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-freadahead test-freadahead.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fseek test-fseek.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fseeko test-fseeko.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-frexpl-nolibm test-frexpl.o randoml.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fseeko3 test-fseeko3.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fseeko4 test-fseeko4.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fstat test-fstat.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ftell test-ftell.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ftell3 test-ftell3.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ftello test-ftello.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ftello3 test-ftello3.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ftello4 test-ftello4.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-fwrite test-fwrite.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-getcwd-lgpl test-getcwd-lgpl.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-getdtablesize test-getdtablesize.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-gettimeofday test-gettimeofday.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-ignore-value test-ignore-value.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-intprops test-intprops.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-inttypes test-inttypes.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-isnand-nolibm test-isnand-nolibm.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-isnanf-nolibm test-isnanf-nolibm.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-isnanl-nolibm test-isnanl-nolibm.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-langinfo test-langinfo.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-link test-link.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-linkedhash_list test-linkedhash_list.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-locale test-locale.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-localeconv test-localeconv.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-localename test-localename.o libtests.a ../lib/libm4.a libtests.a    
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-lseek test-lseek.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-lstat test-lstat.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-malloc-gnu test-malloc-gnu.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-malloca test-malloca.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-math test-math.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-mbrtowc test-mbrtowc.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-mbrtowc-w32 test-mbrtowc-w32.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-mbsinit test-mbsinit.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-memchr test-memchr.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-memchr2 test-memchr2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-nl_langinfo test-nl_langinfo.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-open test-open.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-pathmax test-pathmax.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-pipe2 test-pipe2.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-posix_spawn_file_actions_addclose test-posix_spawn_file_actions_addclose.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-posix_spawn_file_actions_adddup2 test-posix_spawn_file_actions_adddup2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-posix_spawn_file_actions_addopen test-posix_spawn_file_actions_addopen.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-posix_spawn1 test-posix_spawn1.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-posix_spawn2 test-posix_spawn2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-printf-frexp test-printf-frexp.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-printf-frexpl test-printf-frexpl.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-quotearg-simple test-quotearg-simple.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-raise test-raise.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-rawmemchr test-rawmemchr.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-readlink test-readlink.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-regex test-regex.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-rename test-rename.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-rmdir test-rmdir.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sched test-sched.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-setenv test-setenv.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-setlocale1 test-setlocale1.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sigaction test-sigaction.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-setlocale2 test-setlocale2.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-signal-h test-signal-h.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-signbit test-signbit.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sigpipe test-sigpipe.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sigprocmask test-sigprocmask.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sleep test-sleep.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-snprintf test-snprintf.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-spawn-pipe-main test-spawn-pipe-main.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-spawn test-spawn.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stat test-stat.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stdbool test-stdbool.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stdint test-stdint.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stddef test-stddef.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stdio test-stdio.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strchrnul test-strchrnul.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-stdlib test-stdlib.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strerror test-strerror.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-string test-string.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strsignal test-strsignal.o libtests.a ../lib/libm4.a libtests.a    
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strnlen test-strnlen.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strstr test-strstr.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-strtod test-strtod.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-symlink test-symlink.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sys_time test-sys_time.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sys_stat test-sys_stat.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sys_types test-sys_types.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-sys_wait test-sys_wait.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-time test-time.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-dup-safer test-dup-safer.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-unistd test-unistd.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-unsetenv test-unsetenv.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-vasnprintf test-vasnprintf.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-vasprintf test-vasprintf.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-verify test-verify.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-version-etc test-version-etc.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-wchar test-wchar.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-wcrtomb test-wcrtomb.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-write test-write.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-wctype-h test-wctype-h.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-wcrtomb-w32 test-wcrtomb-w32.o libtests.a ../lib/libm4.a libtests.a  
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-xalloc-die test-xalloc-die.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-xvasprintf test-xvasprintf.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-getopt test-getopt.o libtests.a ../lib/libm4.a libtests.a   
+/usr/bin/gcc -std=gnu99  -g -O2   -o test-vasprintf-posix test-vasprintf-posix.o libtests.a ../lib/libm4.a libtests.a  
+make[5]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make  check-TESTS
+make[5]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[6]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+PASS: test-alloca-opt
+PASS: test-array_list
+PASS: test-array_oset
+PASS: test-btowc1.sh
+PASS: test-btowc2.sh
+PASS: test-c-ctype
+PASS: test-avltree_oset
+PASS: test-c-stack.sh
+PASS: test-c-strcase.sh
+SKIP: test-c-stack2.sh
+PASS: test-chdir
+PASS: test-close
+PASS: test-cloexec
+PASS: test-binary-io.sh
+PASS: test-canonicalize-lgpl
+PASS: test-dirent
+PASS: test-dirname
+PASS: test-dup
+PASS: test-environ
+PASS: test-dup2
+PASS: test-errno
+PASS: test-fcntl-h
+PASS: test-fclose
+PASS: test-fdopen
+PASS: test-fcntl
+PASS: test-filenamecat
+PASS: test-fflush2.sh
+PASS: test-fflush
+PASS: test-fgetc
+PASS: test-float
+PASS: test-fopen-safer
+PASS: test-closein.sh
+PASS: test-fopen
+PASS: test-fpending.sh
+PASS: test-fputc
+PASS: test-fread
+PASS: test-fpurge
+PASS: test-freadahead.sh
+PASS: test-frexp-nolibm
+PASS: test-freading
+PASS: test-frexpl-nolibm
+PASS: test-fseek2.sh
+PASS: test-fseek.sh
+PASS: test-fseeko2.sh
+PASS: test-fseeko.sh
+PASS: test-fstat
+PASS: test-fseeko3.sh
+PASS: test-fseeko4.sh
+PASS: test-ftell.sh
+PASS: test-ftell2.sh
+PASS: test-ftell3
+PASS: test-ftello.sh
+PASS: test-ftello2.sh
+PASS: test-ftello4.sh
+PASS: test-getcwd-lgpl
+PASS: test-getdtablesize
+PASS: test-ftello3
+PASS: test-fwrite
+PASS: test-gettimeofday
+PASS: test-getopt
+PASS: test-ignore-value
+PASS: test-intprops
+PASS: test-inttypes
+PASS: test-isnand-nolibm
+PASS: test-isnanf-nolibm
+PASS: test-isnanl-nolibm
+PASS: test-langinfo
+PASS: test-locale
+PASS: test-localeconv
+PASS: test-linkedhash_list
+PASS: test-malloc-gnu
+PASS: test-malloca
+PASS: test-lseek.sh
+PASS: test-math
+PASS: test-mbrtowc1.sh
+PASS: test-link
+PASS: test-mbrtowc2.sh
+PASS: test-lstat
+PASS: test-mbrtowc4.sh
+SKIP: test-mbrtowc-w32-1.sh
+SKIP: test-mbrtowc-w32-3.sh
+SKIP: test-mbrtowc-w32-2.sh
+SKIP: test-mbrtowc-w32-4.sh
+SKIP: test-mbrtowc-w32-5.sh
+PASS: test-mbsinit.sh
+PASS: test-memchr2
+PASS: test-nl_langinfo.sh
+PASS: test-pathmax
+PASS: test-pipe2
+PASS: test-posix_spawn_file_actions_addclose
+PASS: test-posix_spawn_file_actions_adddup2
+PASS: test-open
+PASS: test-posix_spawn_file_actions_addopen
+PASS: test-mbrtowc3.sh
+PASS: test-posix_spawn1
+PASS: test-posix_spawn2
+PASS: test-printf-frexp
+PASS: test-printf-frexpl
+PASS: test-quotearg-simple
+PASS: test-raise
+PASS: test-rawmemchr
+PASS: test-regex
+PASS: test-sched
+PASS: test-setenv
+PASS: test-readlink
+PASS: test-setlocale1.sh
+PASS: test-rmdir
+PASS: test-sigaction
+PASS: test-signal-h
+PASS: test-memchr
+PASS: test-signbit
+PASS: test-setlocale2.sh
+PASS: test-snprintf
+PASS: test-sigpipe.sh
+PASS: test-spawn
+PASS: test-stdbool
+PASS: test-localename
+PASS: test-stddef
+PASS: test-stdint
+PASS: test-stdio
+PASS: test-spawn-pipe.sh
+PASS: test-stdlib
+PASS: test-strchrnul
+PASS: test-stat
+PASS: test-strerror
+PASS: test-string
+PASS: test-strsignal
+PASS: test-strnlen
+PASS: test-strtod
+PASS: test-strstr
+PASS: test-sys_stat
+PASS: test-sys_time
+PASS: test-sys_types
+PASS: test-sys_wait
+PASS: test-time
+PASS: test-unistd
+PASS: test-dup-safer
+PASS: test-unsetenv
+PASS: test-symlink
+PASS: test-vasnprintf
+PASS: test-rename
+PASS: test-vasprintf-posix
+PASS: test-vasprintf
+PASS: test-verify
+PASS: test-wchar
+SKIP: test-wcrtomb-w32-1.sh
+SKIP: test-wcrtomb-w32-2.sh
+PASS: test-wcrtomb.sh
+SKIP: test-wcrtomb-w32-3.sh
+PASS: test-version-etc.sh
+SKIP: test-wcrtomb-w32-4.sh
+SKIP: test-wcrtomb-w32-5.sh
+PASS: test-init.sh
+PASS: test-wctype-h
+PASS: test-write
+PASS: test-xvasprintf
+PASS: test-xalloc-die.sh
+PASS: test-verify.sh
+PASS: test-sigprocmask
+PASS: test-sleep
+PASS: test-vc-list-files-git.sh
+PASS: test-update-copyright.sh
+PASS: test-vc-list-files-cvs.sh
+make[7]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make  all-recursive
+make[8]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+Making all in .
+make[9]: Entering directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[9]: Nothing to be done for 'all-am'.
+make[9]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[8]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[7]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+============================================================================
+Testsuite summary for GNU M4 1.4.17
+============================================================================
+# TOTAL: 163
+# PASS:  152
+# SKIP:  11
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[6]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[5]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[4]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[3]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[2]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17/tests'
+make[1]: Leaving directory '/Scr/scr-test-steven/Programs/M4/build_m4-1.4.17'
