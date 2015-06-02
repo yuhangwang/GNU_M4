@@ -8,7 +8,7 @@ This redistribution is under the same license as the original.
 Please visit the official website for more details: http://www.gnu.org/software/m4/m4.html
 
 ## Download
-You can download the compiled binary files at the [release page](https://github.com/yuhangwang/Tcl/releases).
+You can download the compiled binary files at the [release page](https://github.com/yuhangwang/GNU_M4/releases).
 
 ## Compilation notes
 ### Compilation environment
