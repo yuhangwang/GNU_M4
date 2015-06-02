@@ -19,7 +19,7 @@ You can download the compiled binary files at the [release page](https://github.
 ### Compilation steps
 #### Version: 1.4.17 (2013)
 ```bash
-wget  wget http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.bz2
+wget http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.bz2
 tar xvf m4-1.4.17.tar.bz2
 mkdir build_m4-1.4.17
 cd build_m4-1.4.17
